@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wall -Wextra -Wno-unused-parameter -g -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/test_feat_extract.dir/tests/test_feat_extract.c.o CMakeFiles/test_feat_extract.dir/src/hbm_feat_extract.c.o CMakeFiles/test_feat_extract.dir/platform/mock/hbm_platform_mock.c.o -o test_feat_extract  -lm

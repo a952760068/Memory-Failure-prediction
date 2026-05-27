@@ -1,0 +1,84 @@
+Start testing: May 19 00:33 CST
+----------------------------------------------------------
+1/4 Testing: RingBuffer
+1/4 Test: RingBuffer
+Command: "/Users/solon/D-backup/TeamFile/D-backup/Memory-Failure-prediction/hbm-failure-prediction/firmware/build/test_ring_buffer"
+Directory: /Users/solon/D-backup/TeamFile/D-backup/Memory-Failure-prediction/hbm-failure-prediction/firmware/build
+"RingBuffer" start time: May 19 00:33 CST
+Output:
+----------------------------------------------------------
+=== Ring Buffer Unit Tests ===
+[PASS] test_init
+[PASS] test_push_and_count
+[PASS] test_wrap_around
+[PASS] test_get_window_order (first=10, last=4329)
+All ring buffer tests PASSED.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"RingBuffer" end time: May 19 00:33 CST
+"RingBuffer" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/4 Testing: FeatExtract
+2/4 Test: FeatExtract
+Command: "/Users/solon/D-backup/TeamFile/D-backup/Memory-Failure-prediction/hbm-failure-prediction/firmware/build/test_feat_extract"
+Directory: /Users/solon/D-backup/TeamFile/D-backup/Memory-Failure-prediction/hbm-failure-prediction/firmware/build
+"FeatExtract" start time: May 19 00:33 CST
+Output:
+----------------------------------------------------------
+=== Feature Extract Unit Tests ===
+[PASS] test_zero_input
+[PASS] test_constant_ce (total=43200, temp=70.0)
+[PASS] test_ue_flags
+[PASS] test_normalize_no_crash
+All feature extract tests PASSED.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"FeatExtract" end time: May 19 00:33 CST
+"FeatExtract" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/4 Testing: RFPredict
+3/4 Test: RFPredict
+Command: "/Users/solon/D-backup/TeamFile/D-backup/Memory-Failure-prediction/hbm-failure-prediction/firmware/build/test_rf_predict"
+Directory: /Users/solon/D-backup/TeamFile/D-backup/Memory-Failure-prediction/hbm-failure-prediction/firmware/build
+"RFPredict" start time: May 19 00:33 CST
+Output:
+----------------------------------------------------------
+=== RF Predict Unit Tests (stub model) ===
+[PASS] test_low_ce_gives_normal_rul (RUL=20.00, conf=1.00)
+[PASS] test_high_ce_gives_critical_rul (RUL=5.00)
+[PASS] test_rul_clamped_to_range
+All RF predict tests PASSED.
+<end of output>
+Test time =   0.51 sec
+----------------------------------------------------------
+Test Passed.
+"RFPredict" end time: May 19 00:33 CST
+"RFPredict" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/4 Testing: Integration
+4/4 Test: Integration
+Command: "/Users/solon/D-backup/TeamFile/D-backup/Memory-Failure-prediction/hbm-failure-prediction/firmware/build/test_integration"
+Directory: /Users/solon/D-backup/TeamFile/D-backup/Memory-Failure-prediction/hbm-failure-prediction/firmware/build
+"Integration" start time: May 19 00:33 CST
+Output:
+----------------------------------------------------------
+=== Integration Tests ===
+[PASS] test_no_result_before_30_days
+[PASS] test_alert_level_after_infer (RUL=30.00 level=NORMAL)
+All integration tests PASSED.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Integration" end time: May 19 00:33 CST
+"Integration" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 19 00:33 CST

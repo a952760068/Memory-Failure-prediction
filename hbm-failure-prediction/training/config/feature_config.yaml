@@ -1,0 +1,66 @@
+# 特征工程配置
+feature:
+  # 时间窗口参数
+  observation_window_days: 30
+  step_days: 1
+  samples_per_day: 144          # 24h × 6次/h (10分钟间隔)
+  total_samples: 4320           # 30 × 144
+
+  # ECC突发事件阈值
+  ce_burst_threshold: 100       # CE计数超过此值视为突发
+  temp_high_threshold_1: 85     # 高温阈值1 (°C)
+  temp_high_threshold_2: 90     # 高温阈值2 (°C)
+  temp_thermal_cycle_threshold: 75  # 热循环计数阈值 (°C)
+
+  # 特征名称（顺序与 C 侧 rf_model.h 严格对齐，共43维）
+  feature_names:
+    # ECC CE 系列 (0-6)
+    - ce_count_total
+    - ce_count_mean_daily
+    - ce_count_max_daily
+    - ce_count_std_daily
+    - ce_rate_per_hour
+    - ce_trend_slope
+    - ce_acceleration
+    # ECC UE 系列 (7-12)
+    - ue_count_total
+    - ue_count_mean_daily
+    - ue_count_max_daily
+    - ue_rate_per_hour
+    - ue_trend_slope
+    - ce_ue_ratio
+    # 突发事件 (13-14)
+    - burst_event_count
+    - burst_duration_mean
+    # 列级错误 (15-17)
+    - col_error_rate_max
+    - col_error_rate_mean
+    - col_error_concentration
+    # 温度系列 (18-26)
+    - temp_mean
+    - temp_max
+    - temp_min
+    - temp_std
+    - temp_trend_slope
+    - temp_above_85c_hours
+    - temp_above_90c_hours
+    - temp_ce_correlation
+    - thermal_cycles_count
+    # 功耗系列 (27-31)
+    - power_mean
+    - power_max
+    - power_std
+    - power_trend_slope
+    - power_ce_correlation
+    # 时序特征 (32-42)
+    - error_free_days_streak
+    - days_since_last_ue
+    - days_since_last_ce_burst
+    - weekly_ce_trend
+    - ce_entropy
+    - ue_occurrence_flag
+    - multi_ue_flag
+    - high_temp_high_ce_cooccur
+    - ce_count_last_7days
+    - ce_growth_rate_last7_vs_30
+    - hbm_age_days

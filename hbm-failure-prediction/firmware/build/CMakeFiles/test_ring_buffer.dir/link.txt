@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wall -Wextra -Wno-unused-parameter -g -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/test_ring_buffer.dir/tests/test_ring_buffer.c.o CMakeFiles/test_ring_buffer.dir/src/hbm_ring_buffer.c.o CMakeFiles/test_ring_buffer.dir/platform/mock/hbm_platform_mock.c.o -o test_ring_buffer

@@ -1,0 +1,27 @@
+# 模型训练与告警阈值配置
+random_forest:
+  n_estimators: 150
+  max_depth: 12
+  min_samples_split: 10
+  min_samples_leaf: 5
+  max_features: "sqrt"          # sqrt(43) ≈ 6
+  n_jobs: -1
+  random_state: 42
+
+training:
+  test_size: 0.2
+  cv_folds: 5                   # 时间序列交叉验证折数
+  rul_cap: 30                   # RUL上限（天）
+  high_risk_rul: 7              # 高危样本阈值（RUL≤7天）
+  high_risk_weight: 3.0         # 高危样本权重倍数
+  target_recall_critical: 0.90  # 高危区（RUL≤3天）最低召回率
+
+thresholds:
+  rul_critical: 3               # RUL≤3天: CRITICAL
+  rul_warning: 7                # RUL≤7天: WARNING
+  rul_watch: 14                 # RUL≤14天: WATCH
+
+export:
+  output_dir: "../firmware/include"
+  rf_header: "rf_model.h"
+  scaler_header: "feature_scaler.h"

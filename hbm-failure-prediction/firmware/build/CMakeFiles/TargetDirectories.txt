@@ -1,0 +1,7 @@
+/Users/solon/D-backup/TeamFile/D-backup/Memory-Failure-prediction/hbm-failure-prediction/firmware/build/CMakeFiles/test_ring_buffer.dir
+/Users/solon/D-backup/TeamFile/D-backup/Memory-Failure-prediction/hbm-failure-prediction/firmware/build/CMakeFiles/test_feat_extract.dir
+/Users/solon/D-backup/TeamFile/D-backup/Memory-Failure-prediction/hbm-failure-prediction/firmware/build/CMakeFiles/test_rf_predict.dir
+/Users/solon/D-backup/TeamFile/D-backup/Memory-Failure-prediction/hbm-failure-prediction/firmware/build/CMakeFiles/test_integration.dir
+/Users/solon/D-backup/TeamFile/D-backup/Memory-Failure-prediction/hbm-failure-prediction/firmware/build/CMakeFiles/test.dir
+/Users/solon/D-backup/TeamFile/D-backup/Memory-Failure-prediction/hbm-failure-prediction/firmware/build/CMakeFiles/edit_cache.dir
+/Users/solon/D-backup/TeamFile/D-backup/Memory-Failure-prediction/hbm-failure-prediction/firmware/build/CMakeFiles/rebuild_cache.dir
